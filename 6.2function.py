@@ -1,9 +1,15 @@
 import numpy as np
 
 
+def test(x):
+    return x**2
+
+
 def plusOne(f, x):
     return f(x) + 1
 
+
+print(plusOne(test, 4))
 
 print(plusOne(np.sin, np.pi / 2))
 print(plusOne(np.cos, np.pi / 2))
@@ -22,5 +28,13 @@ def composite(x):
 
 print(composite(9))
 
+
 def print_hello():
-    print('Hello')
+    return "Daddy"
+
+
+print(print_hello())
+
+
+def print_greeting():
+    print("你男的女的")
