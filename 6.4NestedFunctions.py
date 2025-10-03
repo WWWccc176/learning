@@ -11,7 +11,8 @@ def my_dist_xyz(x, y, z):#三维点的距离
     d1 = my_dist(x, z)
     d2 = my_dist(y, z)
     
-    return [d0, d1, d2]
+    d=np.sqrt(d0**2+d1**2+d2**2)
+    return np.array([d]).tolist()  # 转换为 Python 原生列表
 
 print(my_dist_xyz([1,2],[3,5],[7,5]))
 print(my_dist_xyz((1,2),(3,5),(7,5)))

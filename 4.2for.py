@@ -7,3 +7,9 @@ print("Done")
 for _ in range(0, 17):
     print(".", end="")
 print()
+
+word = "hello"
+
+for letter in word:
+    print(letter)
+print(letter)
