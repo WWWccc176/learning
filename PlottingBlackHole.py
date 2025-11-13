@@ -130,8 +130,8 @@ def F(x):
 # ---- 4. 主程序：分块 + 坐标映射 (m,n)->(x,y) ----
 def main():
     # 像素坐标 m,n
-    x_pix = cp.arange(1, 2000 + 1e-6, 0.1, dtype=DTYPE)
-    y_pix = cp.arange(1, 1200 + 1e-6, 0.1, dtype=DTYPE)
+    x_pix = cp.arange(1, 2000 + 1e-6, 0.05, dtype=DTYPE)
+    y_pix = cp.arange(1, 1200 + 1e-6, 0.05, dtype=DTYPE)
     Ny, Nx = y_pix.size, x_pix.size
 
     # 最终 RGB 图像 （GPU 上 uint8）
@@ -152,7 +152,7 @@ def main():
             Fval = F(Hval).astype(cp.uint8)
             img_gpu[y0:y1, :, c_idx] = Fval
 
-        print(f"Processed rows {y0} – {y1}")
+        print(f"Processed rows {y0} - {y1}")
 
     # 拷回 CPU
     img = cp.asnumpy(img_gpu)
