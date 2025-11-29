@@ -1,4 +1,4 @@
-ubound = 100
+ubound = 500
 diviser = [3, 5]
 
 
